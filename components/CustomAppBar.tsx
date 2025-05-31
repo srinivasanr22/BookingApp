@@ -16,8 +16,7 @@ const CustomAppBar: React.FC<LayoutProps> = ({ children }) => {
 
   const route = segments.length > 1 ? segments[segments.length - 1] : 'index';
   const showBack = pathname !== '/';
- console.log('route', route);
- console.log('route', segments.length);
+  
   const routeTitles: Record<string, string> = {
     index: 'Home',
     profile: 'Profile',
@@ -34,9 +33,9 @@ const CustomAppBar: React.FC<LayoutProps> = ({ children }) => {
     <SafeAreaView style={styles.container}>
       <Appbar.Header style={[styles.header]}>
         {showBack ? (
-          <Appbar.BackAction onPress={() => router.back()} />
+          <Appbar.BackAction size={18} onPress={() => router.back()} color={Colors.whiteColor} />
         ) : (
-          <Appbar.Action icon="menu" color={Colors.whiteColor} onPress={() => console.log('Menu')} />
+          <Appbar.Action icon="menu" size={18} color={Colors.whiteColor} onPress={() => console.log('Menu')} />
         )}
         <Appbar.Content title={title} titleStyle={styles.titleStyle}/>
       </Appbar.Header>
