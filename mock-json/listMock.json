@@ -1,0 +1,37 @@
+[{
+  "matchID": "BD01",
+  "place": "Punggol",
+  "pincode": "541621",
+  "totalSlot": "4",
+  "availableSlot": "3",
+  "chargePerPerson": "10",
+  "canCancel": false,
+  "description": "Some Dummy Text",
+  "date": "16-06-2025",
+  "startTime": "20.00",
+  "endTime": "21:00"
+},{
+  "matchID": "BD02",
+  "place": "Sengkang",
+  "pincode": "541312",
+  "totalSlot": "4",
+  "availableSlot": "2",
+  "chargePerPerson": "20",
+  "canCancel": false,
+  "description": "Some Dummy Text",
+  "startTime": "12.00",
+  "date": "18-06-2025",
+  "endTime": "21:00"
+},{
+  "matchID": "BD03",
+  "place": "One Raffles",
+  "pincode": "541312",
+  "totalSlot": "4",
+  "availableSlot": "2",
+  "chargePerPerson": "20",
+  "canCancel": false,
+  "description": "Some Dummy Text",
+  "startTime": "12.00",
+  "date": "18-06-2025",
+  "endTime": "21:00"
+}]

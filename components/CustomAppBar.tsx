@@ -14,7 +14,7 @@ const CustomAppBar: React.FC<LayoutProps> = ({ children }) => {
   const pathname = usePathname(); // e.g., /profile
   const segments = useSegments(); // ['profile']
 
-  const route = segments.length > 1 ? segments[segments.length - 1] : 'index';
+  const route = segments.length > 1 ? segments[segments.length - 1] : '';
   const showBack = pathname !== '/';
   
   const routeTitles: Record<string, string> = {
@@ -35,11 +35,13 @@ const CustomAppBar: React.FC<LayoutProps> = ({ children }) => {
         {showBack ? (
           <Appbar.BackAction size={18} onPress={() => router.back()} color={Colors.whiteColor} />
         ) : (
-          <Appbar.Action icon="menu" size={18} color={Colors.whiteColor} onPress={() => console.log('Menu')} />
+          <View>
+             <Appbar.Action icon="menu" size={24} color={Colors.whiteColor} onPress={() => console.log('Menu')} />
+             {/* <MaterialCommunityIcons name="bell-outline" size={24} color={Colors.whiteColor} /> */}
+          </View>
         )}
         <Appbar.Content title={title} titleStyle={styles.titleStyle}/>
       </Appbar.Header>
-
       <View style={styles.content}>{children}</View>
     </SafeAreaView>
   );
@@ -67,5 +69,5 @@ const styles = StyleSheet.create({
   titleStyle: {
     color: Colors.whiteColor, 
     fontSize: 16
-  }
+  },
 });
